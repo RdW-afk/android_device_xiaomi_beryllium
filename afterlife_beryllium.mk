@@ -7,14 +7,24 @@
 $(call inherit-product, device/xiaomi/beryllium/device.mk)
 
 # Inherit some common DerpFest stuff.
-$(call inherit-product, vendor/derp/config/common_full_phone.mk)
+$(call inherit-product, vendor/afterlife/config/common_full_phone.mk)
+
+# AfterLife flags
+AFTERLIFE_MAINTAINER := Declanヅ
+
+# Bootanimation
 TARGET_BOOT_ANIMATION_RES := 1080
-DERP_BUILDTYPE := Official
-TARGET_USES_BLUR := true
+
+# disable/enable blur support, default is false
+TARGET_SUPPORTS_BLUR := true
+
+# Face Unlock
+TARGET_FACE_UNLOCK_SUPPORTED := true
+
 TARGET_SUPPORTS_QUICK_TAP := false
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := derp_beryllium
+PRODUCT_NAME := afterlife_beryllium
 PRODUCT_DEVICE := beryllium
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := POCO F1
